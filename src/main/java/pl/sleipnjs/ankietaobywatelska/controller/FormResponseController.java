@@ -49,14 +49,17 @@ public class FormResponseController {
     try {
       Optional<Form> _formData = formRepository.findById(formId);
       if (_formData.isPresent()) {
-      	Form _form = _formData.get();
+        Form _form = _formData.get();
         for (Map.Entry<String, Object> entry : responses.entrySet()) {
           System.out.println(entry.getKey() + ":" + entry.getValue());
           FormResponse formResponse = formResponseRepository.save(new FormResponse(0, _form, entry.getKey(), entry.getValue().toString()));
         }
+        _form.setResponseCounter(_form.getResponseCounter() + 1);
+        Form savedForm = formRepository.save(_form);
       }
       return new ResponseEntity<>("OK", HttpStatus.CREATED);
     } catch (Exception e) {
+        System.out.println(e.toString());
       return new ResponseEntity<>(null, HttpStatus.EXPECTATION_FAILED);
     }
   }

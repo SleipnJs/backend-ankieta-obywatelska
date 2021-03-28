@@ -38,8 +38,10 @@ public class FormController {
   }
 
   @PostMapping("/forms")
-  public ResponseEntity<String> setForm(@RequestBody Map<String, Object> formStage) {
-  	Form form = formRepository.save(new Form(0, (String) formStage.get("form_title"), (String) formStage.get("form_description"), "", 0, "", "","28.03.2020"));
+  public ResponseEntity<String> setForm(@RequestBody Map<String, Object> responseHolder) {
+    Map<String, Object> formStage = (Map<String, Object>) responseHolder.get("responses");
+    String imageHref = (String) responseHolder.get("imageHref");
+  	Form form = formRepository.save(new Form(0, (String) formStage.get("form_title"), (String) formStage.get("form_description"), imageHref, 0, "", "","28.03.2020"));
 
 		JSONObject obj = new JSONObject();
   	try {
@@ -47,7 +49,7 @@ public class FormController {
 		} catch(Exception e) {
   		System.out.println(e.toString());
 		}
-  	FormStage _formStage = new FormStage(0, 2, obj.toString(), form);
+  	FormStage _formStage = new FormStage(0, 1, obj.toString(), form);
     try {
     	formStageRepository.save(_formStage);
         return new ResponseEntity<>("OK", HttpStatus.CREATED);
