@@ -3,8 +3,8 @@ package pl.sleipnjs.ankietaobywatelska.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tutorials")
-public class Tutorial {
+@Table(name = "form")
+public class Form {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -16,50 +16,98 @@ public class Tutorial {
 	@Column(name = "description")
 	private String description;
 
-	@Column(name = "published")
-	private boolean published;
+	@Column(name = "image_link")
+	private String imageLink;
 
-	public Tutorial() {
+	@Column(name = "response_counter")
+	private int responseCounter;
+
+	@Column(name = "category")
+	private String category;
+
+	@Column(name = "author")
+	private String author;
+
+	@Column(name = "createdAt")
+	private String createdAt;
+
+
+	public Form() {
 
 	}
 
-	public Tutorial(String title, String description, boolean published) {
+	public Form(long id, String title, String description, String imageLink, int responseCounter, String category, String author, String createdAt) {
+		this.id = id;
 		this.title = title;
 		this.description = description;
-		this.published = published;
+		this.imageLink = imageLink;
+		this.responseCounter = responseCounter;
+		this.category = category;
+		this.author = author;
+		this.createdAt = createdAt;
+	}
+
+	public void setImageLink(String imageLink) {
+		this.imageLink = imageLink;
+	}
+
+	public String getImageLink() {
+		return imageLink;
 	}
 
 	public long getId() {
 		return id;
 	}
 
-	public String getTitle() {
-		return title;
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(String createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
-	public boolean isPublished() {
-		return published;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
-	public void setPublished(boolean isPublished) {
-		this.published = isPublished;
+	public String getTitle() {
+		return title;
 	}
 
-	@Override
-	public String toString() {
-		return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
+	public String getDescription() {
+		return description;
 	}
 
+	public String getCategory() {
+		return category;
+	}
+
+	public int getResponseCounter() {
+		return responseCounter;
+	}
+
+	public void setResponseCounter(int responseCounter) {
+		this.responseCounter = responseCounter;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
 }

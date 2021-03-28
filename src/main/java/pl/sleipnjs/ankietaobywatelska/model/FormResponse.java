@@ -3,73 +3,62 @@ package pl.sleipnjs.ankietaobywatelska.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "form_stage")
-public class FormStage {
+@Table(name = "form_responses")
+public class FormResponse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "stage_number")
-    private int stageNumber;
-
-    @Column(name = "form_content")
-    private String formContent;
-
     @OneToOne()
     @JoinColumn(name = "id_form", referencedColumnName = "id")
     private Form form;
 
-    public FormStage() {
+    @Column(name = "field_key")
+    private String formKey;
+
+    @Column(name = "response")
+    private String response;
+
+    public FormResponse() {
     }
 
-    public FormStage(long id, int stageNumber, String formContent, Form form) {
+    public FormResponse(long id, Form form, String formKey, String response) {
         this.id = id;
-        this.stageNumber = stageNumber;
-        this.formContent = formContent;
         this.form = form;
+        this.formKey = formKey;
+        this.response = response;
     }
-
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public void setStageNumber(int stageNumber) {
-        this.stageNumber = stageNumber;
-    }
-
-    public void setFormContent(String formContent) {
-        this.formContent = formContent;
     }
 
     public void setForm(Form form) {
         this.form = form;
     }
 
+    public void setFormKey(String formKey) {
+        this.formKey = formKey;
+    }
+
+    public void setResponse(String response) {
+        this.response = response;
+    }
+
     public long getId() {
         return id;
-    }
-
-    public int getStageNumber() {
-        return stageNumber;
-    }
-
-    public String getFormContent() {
-        return formContent;
     }
 
     public Form getForm() {
         return form;
     }
 
-    @Override
-    public String toString() {
-        return "FormStage{" +
-                "id=" + id +
-                ", stageNumber=" + stageNumber +
-                ", formContent='" + formContent + '\'' +
-                ", form=" + form +
-                '}';
+    public String getFormKey() {
+        return formKey;
+    }
+
+    public String getResponse() {
+        return response;
     }
 }

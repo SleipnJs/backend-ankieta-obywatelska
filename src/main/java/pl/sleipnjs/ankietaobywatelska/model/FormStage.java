@@ -3,63 +3,73 @@ package pl.sleipnjs.ankietaobywatelska.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "form")
-public class Form {
+@Table(name = "form_stage")
+public class FormStage {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-	@Column(name = "title")
-	private String title;
+    @Column(name = "stage_number")
+    private int stageNumber;
 
-	@Column(name = "description")
-	private String description;
+    @Column(name = "form_content")
+    private String formContent;
 
-	@Column(name = "category")
-	private boolean published;
+    @OneToOne()
+    @JoinColumn(name = "id_form", referencedColumnName = "id")
+    private Form form;
 
-	public Form() {
+    public FormStage() {
+    }
 
-	}
+    public FormStage(long id, int stageNumber, String formContent, Form form) {
+        this.id = id;
+        this.stageNumber = stageNumber;
+        this.formContent = formContent;
+        this.form = form;
+    }
 
-	public Form(String title, String description, boolean published) {
-		this.title = title;
-		this.description = description;
-		this.published = published;
-	}
 
-	public long getId() {
-		return id;
-	}
+    public void setId(long id) {
+        this.id = id;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    public void setStageNumber(int stageNumber) {
+        this.stageNumber = stageNumber;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public void setFormContent(String formContent) {
+        this.formContent = formContent;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setForm(Form form) {
+        this.form = form;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public long getId() {
+        return id;
+    }
 
-	public boolean isPublished() {
-		return published;
-	}
+    public int getStageNumber() {
+        return stageNumber;
+    }
 
-	public void setPublished(boolean isPublished) {
-		this.published = isPublished;
-	}
+    public String getFormContent() {
+        return formContent;
+    }
 
-	@Override
-	public String toString() {
-		return "Tutorial [id=" + id + ", title=" + title + ", desc=" + description + ", published=" + published + "]";
-	}
+    public Form getForm() {
+        return form;
+    }
 
+    @Override
+    public String toString() {
+        return "FormStage{" +
+                "id=" + id +
+                ", stageNumber=" + stageNumber +
+                ", formContent='" + formContent + '\'' +
+                ", form=" + form +
+                '}';
+    }
 }
