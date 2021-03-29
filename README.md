@@ -21,6 +21,7 @@ Serwer do strony Ankieta obywatelska. Projektu Stworzonego na Hackarök 2021
 ## About
 
 **Wstęp**
+
 Hej! Z tej strony zespół SleipnJs. Temat tegorocznego hackatonu był dosyć skomplikowany ale widzimy, że większość zdała egzamin. Teraz nasza kolej. Na Hackarok 2021 przygotowaliśmy projekt o nazwie Ankieta Obywatelska.
 
 **Zgodność z tematyką konkursu**
