@@ -1,9 +1,12 @@
 # tarBUS - Android App
-
+hackathon-logo5.b20e6cfb.png
 <img src="/readme/logo.svg" align="left"
-width="200" hspace="10" vspace="10">
+width="100" hspace="10" vspace="10">
+<img src="/readme/hackathon-logo5.b20e6cfb.png" align="left"
+width="100" hspace="10" vspace="10">
 
-Ankieta Obywatelska - Backend
+
+## Ankieta Obywatelska - Backend
 
 Serwer do strony Ankieta obywatelska. Projektu Stworzonego na Hackarök 2021
 
