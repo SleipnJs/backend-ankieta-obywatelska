@@ -9,9 +9,7 @@ width="100" hspace="10" vspace="10">
 
 Serwer do strony Ankieta obywatelska. Projektu Stworzonego na Hackarök 2021
 
-
-
-
+##
 ## Skład zespołu
 > Dominik Pająk
 >> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/dpajak99)
