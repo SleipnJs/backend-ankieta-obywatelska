@@ -1,8 +1,7 @@
-# tarBUS - Android App
-hackathon-logo5.b20e6cfb.png
-<img src="/readme/logo.svg" align="left"
-width="100" hspace="10" vspace="10">
+# Hackarök 2021 - Aplikacja Obywatelska | Backend
 <img src="/readme/hackathon-logo5.b20e6cfb.png" align="left"
+width="100" hspace="10" vspace="10">
+<img src="/readme/logo.svg" align="left"
 width="100" hspace="10" vspace="10">
 
 
