@@ -32,8 +32,6 @@ public class FormController {
   @GetMapping("/formsMostLiked")
   public ResponseEntity<Iterable<Form>> getMostLiked(@RequestParam(required = true) int amount) {
     Iterable<Form> mostLiked = formRepository.fintMostLiked(amount);
-    System.out.println("test");
-    System.out.println(mostLiked);
     return new ResponseEntity<>(mostLiked, HttpStatus.OK);
   }
 

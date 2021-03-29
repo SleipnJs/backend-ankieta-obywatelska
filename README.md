@@ -1,9 +1,8 @@
-
-
 ## Run Spring Boot application
 ```
 mvn spring-boot:run
 ```
+
 ## Endpoints
 ```
 @Post - authenticateUser
@@ -69,3 +68,4 @@ mvn spring-boot:run
 @Get - getRoles
 /api/admin/users/roles
 ```
+=======
