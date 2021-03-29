@@ -11,11 +11,11 @@ Serwer do strony Ankieta obywatelska. Projektu Stworzonego na Hackarök 2021
 
 ## Skład zespołu
 > Dominik Pająk
-> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/dpajak99)
-> [![Linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/dominikpajak/)
+>> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/dpajak99)
+>> [![Linkedin](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/dominikpajak/)
 
 > Jakub Serwin
-> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/Isaayy)
+>> [![Github](https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white)](https://github.com/Isaayy)
 
 
 ## Technology Stack
