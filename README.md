@@ -5,24 +5,7 @@ width="200" hspace="10" vspace="10">
 
 Ankieta Obywatelska - Backend
 
-Aplikacja została stworzona z myślą o tych mieszkańcach okolic Tarnowa, którzy na co dzień przyzwyczajeni byli do nowoczesnych rozwiązań oferowanych przez linie miejskie, a przez zmianę na prywatnego przewoźnika - całkowicie stracili do nich dostęp.
-
-<p align="left">
-<a href="https://play.google.com/store/apps/details?id=com.dpajak99.tarbus2021">
-    <img alt="Get it on Google Play"
-        height="83"
-        src="https://inspirationapps.com/wp-content/uploads/2020/01/google-play-badge.png" />
-</a>  
-<a href="https://apps.apple.com/pl/app/tarbus/id1554556128">
-    <img alt="Get it on AppStore"
-        height="80"
-        src="https://inspirationapps.com/wp-content/uploads/2020/01/app-store-badge.png" />
-        </a>
-        </p>
-
-## About
-
-Jesteśmy małą grupką uczniów i studentów z tarnowskich szkół. Chcemy pomóc mieszkańcom naszych miejscowości w codziennym życiu. Naszym pierwszym projektem jest aplikacja tarBUS, która  wspomaga i upraszcza podróże komunikacją zbiorową na terenie miasta i gmin ościennych. Nasza idea przewodnia: Razem możemy uczynić nasze miasto lepszym miejscem!  
+Serwer do strony Ankieta obywatelska. Projektu Stworzonego na Hackarök 2021
 
 ## Technology Stack
 - Java Spring
